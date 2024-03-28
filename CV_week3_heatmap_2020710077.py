@@ -13,6 +13,9 @@ labels = ["angry", "disgusted", "fearful", "happy", "neutral", "sad", "surprised
 
 df_cm = pd.DataFrame(array, index=labels, columns=labels)
 
-plt.figure(figsize = (10,7))
-sns.heatmap(df_cm, annot=True)
+#plt.figure(figsize = (10,10))
+fig, ax = plt.subplots(figsize=(15,10))
+sns.heatmap(df_cm, linewidths=1, annot=True, ax=ax, fmt='d',cmap='Blues')
+# sns.set(font_scale=1.4)
+
 plt.show()
